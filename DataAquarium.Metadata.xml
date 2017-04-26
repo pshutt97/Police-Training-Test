@@ -2383,6 +2383,21 @@
       <Columns>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <COLUMN_NAME>CourseID</COLUMN_NAME>
+        <ORDINAL_POSITION>4</ORDINAL_POSITION>
+        <IS_NULLABLE>YES</IS_NULLABLE>
+        <DATA_TYPE>int</DATA_TYPE>
+        <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
+        <NUMERIC_PRECISION_RADIX>10</NUMERIC_PRECISION_RADIX>
+        <NUMERIC_SCALE>0</NUMERIC_SCALE>
+        <IS_SPARSE>false</IS_SPARSE>
+        <IS_COLUMN_SET>false</IS_COLUMN_SET>
+        <IS_FILESTREAM>false</IS_FILESTREAM>
+      </Columns>
+      <Columns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Maintenance</TABLE_NAME>
         <COLUMN_NAME>RecordID</COLUMN_NAME>
         <ORDINAL_POSITION>1</ORDINAL_POSITION>
@@ -2933,6 +2948,21 @@
       <AllColumns>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <COLUMN_NAME>CourseID</COLUMN_NAME>
+        <ORDINAL_POSITION>4</ORDINAL_POSITION>
+        <IS_NULLABLE>YES</IS_NULLABLE>
+        <DATA_TYPE>int</DATA_TYPE>
+        <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
+        <NUMERIC_PRECISION_RADIX>10</NUMERIC_PRECISION_RADIX>
+        <NUMERIC_SCALE>0</NUMERIC_SCALE>
+        <IS_SPARSE>false</IS_SPARSE>
+        <IS_COLUMN_SET>false</IS_COLUMN_SET>
+        <IS_FILESTREAM>false</IS_FILESTREAM>
+      </AllColumns>
+      <AllColumns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Maintenance</TABLE_NAME>
         <COLUMN_NAME>RecordID</COLUMN_NAME>
         <ORDINAL_POSITION>1</ORDINAL_POSITION>
@@ -3447,6 +3477,17 @@
   </ViewColumnsCollection>
   <ForeignKeysCollection>
     <DocumentElement>
+      <ForeignKeys>
+        <CONSTRAINT_CATALOG>Police Training 2</CONSTRAINT_CATALOG>
+        <CONSTRAINT_SCHEMA>dbo</CONSTRAINT_SCHEMA>
+        <CONSTRAINT_NAME>FK_Course_of_Fire_Training</CONSTRAINT_NAME>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <CONSTRAINT_TYPE>FOREIGN KEY</CONSTRAINT_TYPE>
+        <IS_DEFERRABLE>NO</IS_DEFERRABLE>
+        <INITIALLY_DEFERRED>NO</INITIALLY_DEFERRED>
+      </ForeignKeys>
       <ForeignKeys>
         <CONSTRAINT_CATALOG>Police Training 2</CONSTRAINT_CATALOG>
         <CONSTRAINT_SCHEMA>dbo</CONSTRAINT_SCHEMA>
@@ -4421,6 +4462,33 @@
           <NonVersionedProviderType>12</NonVersionedProviderType>
           <IsColumnSet>false</IsColumnSet>
         </Column>
+        <Column>
+          <ColumnName>CourseID</ColumnName>
+          <ColumnOrdinal>3</ColumnOrdinal>
+          <ColumnSize>4</ColumnSize>
+          <NumericPrecision>10</NumericPrecision>
+          <NumericScale>255</NumericScale>
+          <IsUnique>false</IsUnique>
+          <IsKey>false</IsKey>
+          <BaseColumnName>CourseID</BaseColumnName>
+          <BaseSchemaName>dbo</BaseSchemaName>
+          <BaseTableName>Course_of_Fire</BaseTableName>
+          <DataType>System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</DataType>
+          <AllowDBNull>true</AllowDBNull>
+          <ProviderType>8</ProviderType>
+          <IsAliased>false</IsAliased>
+          <IsExpression>false</IsExpression>
+          <IsIdentity>false</IsIdentity>
+          <IsAutoIncrement>false</IsAutoIncrement>
+          <IsRowVersion>false</IsRowVersion>
+          <IsHidden>false</IsHidden>
+          <IsLong>false</IsLong>
+          <IsReadOnly>false</IsReadOnly>
+          <ProviderSpecificDataType>System.Data.SqlTypes.SqlInt32, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ProviderSpecificDataType>
+          <DataTypeName>int</DataTypeName>
+          <NonVersionedProviderType>8</NonVersionedProviderType>
+          <IsColumnSet>false</IsColumnSet>
+        </Column>
       </DocumentElement>
     </Table>
     <Table Schema="dbo" Name="Officers">
@@ -5132,6 +5200,18 @@
       <Columns>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <COLUMN_NAME>CourseID</COLUMN_NAME>
+        <ORDINAL_POSITION>4</ORDINAL_POSITION>
+        <IS_NULLABLE>YES</IS_NULLABLE>
+        <DATA_TYPE>int</DATA_TYPE>
+        <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
+        <NUMERIC_PRECISION_RADIX>10</NUMERIC_PRECISION_RADIX>
+        <NUMERIC_SCALE>0</NUMERIC_SCALE>
+      </Columns>
+      <Columns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Officers</TABLE_NAME>
         <COLUMN_NAME>BadgeID</COLUMN_NAME>
         <ORDINAL_POSITION>1</ORDINAL_POSITION>
@@ -5384,6 +5464,16 @@
       <ForeignKeyColumns>
         <CONSTRAINT_CATALOG>Police Training 2</CONSTRAINT_CATALOG>
         <CONSTRAINT_SCHEMA>dbo</CONSTRAINT_SCHEMA>
+        <CONSTRAINT_NAME>FK_Course_of_Fire_Training</CONSTRAINT_NAME>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <COLUMN_NAME>CourseID</COLUMN_NAME>
+        <ORDINAL_POSITION>1</ORDINAL_POSITION>
+      </ForeignKeyColumns>
+      <ForeignKeyColumns>
+        <CONSTRAINT_CATALOG>Police Training 2</CONSTRAINT_CATALOG>
+        <CONSTRAINT_SCHEMA>dbo</CONSTRAINT_SCHEMA>
         <CONSTRAINT_NAME>FK_Maintenance_Maintenance_Tech1</CONSTRAINT_NAME>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
@@ -5445,6 +5535,13 @@
   </ForeignKeyColumns>
   <ForeignKeyReferences>
     <DocumentElement>
+      <ForeignKeyReferences>
+        <CONSTRAINT_NAME>FK_Course_of_Fire_Training</CONSTRAINT_NAME>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <REFERENCED_TABLE_SCHEMA>dbo</REFERENCED_TABLE_SCHEMA>
+        <REFERENCED_TABLE_NAME>Training</REFERENCED_TABLE_NAME>
+      </ForeignKeyReferences>
       <ForeignKeyReferences>
         <CONSTRAINT_NAME>FK_Maintenance_Maintenance_Tech1</CONSTRAINT_NAME>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
