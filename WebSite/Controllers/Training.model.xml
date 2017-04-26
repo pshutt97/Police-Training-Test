@@ -6,7 +6,6 @@
     </foreignKey>
   </foreignKeys>
   <columns>
-    <column name="CourseName" fieldName="CourseName" label="Course" />
     <column name="CourseID" fieldName="CourseID" label="Course ID" />
     <column name="Score" fieldName="Score" label="Score" />
     <column name="Date" fieldName="Date" label="Date" format="g" />

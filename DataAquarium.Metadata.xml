@@ -2298,13 +2298,19 @@
       <Tables>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
         <TABLE_TYPE>BASE TABLE</TABLE_TYPE>
       </Tables>
       <Tables>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Weapon_Type</TABLE_NAME>
+        <TABLE_TYPE>BASE TABLE</TABLE_TYPE>
+      </Tables>
+      <Tables>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
         <TABLE_TYPE>BASE TABLE</TABLE_TYPE>
       </Tables>
       <Tables>
@@ -2332,8 +2338,8 @@
       <Columns>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
-        <COLUMN_NAME>Training_CourseID</COLUMN_NAME>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <COLUMN_NAME>CoF_ID</COLUMN_NAME>
         <ORDINAL_POSITION>1</ORDINAL_POSITION>
         <IS_NULLABLE>NO</IS_NULLABLE>
         <DATA_TYPE>int</DATA_TYPE>
@@ -2347,14 +2353,29 @@
       <Columns>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
-        <COLUMN_NAME>Officers_BadgeID</COLUMN_NAME>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <COLUMN_NAME>CourseName</COLUMN_NAME>
         <ORDINAL_POSITION>2</ORDINAL_POSITION>
         <IS_NULLABLE>NO</IS_NULLABLE>
-        <DATA_TYPE>int</DATA_TYPE>
-        <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
-        <NUMERIC_PRECISION_RADIX>10</NUMERIC_PRECISION_RADIX>
-        <NUMERIC_SCALE>0</NUMERIC_SCALE>
+        <DATA_TYPE>nvarchar</DATA_TYPE>
+        <CHARACTER_MAXIMUM_LENGTH>50</CHARACTER_MAXIMUM_LENGTH>
+        <CHARACTER_OCTET_LENGTH>100</CHARACTER_OCTET_LENGTH>
+        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
+        <IS_SPARSE>false</IS_SPARSE>
+        <IS_COLUMN_SET>false</IS_COLUMN_SET>
+        <IS_FILESTREAM>false</IS_FILESTREAM>
+      </Columns>
+      <Columns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <COLUMN_NAME>CourseLocation</COLUMN_NAME>
+        <ORDINAL_POSITION>3</ORDINAL_POSITION>
+        <IS_NULLABLE>NO</IS_NULLABLE>
+        <DATA_TYPE>nvarchar</DATA_TYPE>
+        <CHARACTER_MAXIMUM_LENGTH>50</CHARACTER_MAXIMUM_LENGTH>
+        <CHARACTER_OCTET_LENGTH>100</CHARACTER_OCTET_LENGTH>
+        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
         <IS_SPARSE>false</IS_SPARSE>
         <IS_COLUMN_SET>false</IS_COLUMN_SET>
         <IS_FILESTREAM>false</IS_FILESTREAM>
@@ -2611,23 +2632,8 @@
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Training</TABLE_NAME>
-        <COLUMN_NAME>CourseName</COLUMN_NAME>
-        <ORDINAL_POSITION>2</ORDINAL_POSITION>
-        <IS_NULLABLE>NO</IS_NULLABLE>
-        <DATA_TYPE>nvarchar</DATA_TYPE>
-        <CHARACTER_MAXIMUM_LENGTH>100</CHARACTER_MAXIMUM_LENGTH>
-        <CHARACTER_OCTET_LENGTH>200</CHARACTER_OCTET_LENGTH>
-        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
-        <IS_SPARSE>false</IS_SPARSE>
-        <IS_COLUMN_SET>false</IS_COLUMN_SET>
-        <IS_FILESTREAM>false</IS_FILESTREAM>
-      </Columns>
-      <Columns>
-        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
-        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Training</TABLE_NAME>
         <COLUMN_NAME>Score</COLUMN_NAME>
-        <ORDINAL_POSITION>3</ORDINAL_POSITION>
+        <ORDINAL_POSITION>2</ORDINAL_POSITION>
         <IS_NULLABLE>YES</IS_NULLABLE>
         <DATA_TYPE>int</DATA_TYPE>
         <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
@@ -2642,7 +2648,7 @@
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Training</TABLE_NAME>
         <COLUMN_NAME>Date</COLUMN_NAME>
-        <ORDINAL_POSITION>4</ORDINAL_POSITION>
+        <ORDINAL_POSITION>3</ORDINAL_POSITION>
         <IS_NULLABLE>YES</IS_NULLABLE>
         <DATA_TYPE>date</DATA_TYPE>
         <DATETIME_PRECISION>0</DATETIME_PRECISION>
@@ -2655,12 +2661,72 @@
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Training</TABLE_NAME>
         <COLUMN_NAME>Officers_BadgeID</COLUMN_NAME>
-        <ORDINAL_POSITION>5</ORDINAL_POSITION>
+        <ORDINAL_POSITION>4</ORDINAL_POSITION>
         <IS_NULLABLE>YES</IS_NULLABLE>
         <DATA_TYPE>int</DATA_TYPE>
         <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
         <NUMERIC_PRECISION_RADIX>10</NUMERIC_PRECISION_RADIX>
         <NUMERIC_SCALE>0</NUMERIC_SCALE>
+        <IS_SPARSE>false</IS_SPARSE>
+        <IS_COLUMN_SET>false</IS_COLUMN_SET>
+        <IS_FILESTREAM>false</IS_FILESTREAM>
+      </Columns>
+      <Columns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
+        <COLUMN_NAME>Training_CourseID</COLUMN_NAME>
+        <ORDINAL_POSITION>1</ORDINAL_POSITION>
+        <IS_NULLABLE>NO</IS_NULLABLE>
+        <DATA_TYPE>int</DATA_TYPE>
+        <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
+        <NUMERIC_PRECISION_RADIX>10</NUMERIC_PRECISION_RADIX>
+        <NUMERIC_SCALE>0</NUMERIC_SCALE>
+        <IS_SPARSE>false</IS_SPARSE>
+        <IS_COLUMN_SET>false</IS_COLUMN_SET>
+        <IS_FILESTREAM>false</IS_FILESTREAM>
+      </Columns>
+      <Columns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
+        <COLUMN_NAME>Officers_BadgeID</COLUMN_NAME>
+        <ORDINAL_POSITION>2</ORDINAL_POSITION>
+        <IS_NULLABLE>NO</IS_NULLABLE>
+        <DATA_TYPE>int</DATA_TYPE>
+        <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
+        <NUMERIC_PRECISION_RADIX>10</NUMERIC_PRECISION_RADIX>
+        <NUMERIC_SCALE>0</NUMERIC_SCALE>
+        <IS_SPARSE>false</IS_SPARSE>
+        <IS_COLUMN_SET>false</IS_COLUMN_SET>
+        <IS_FILESTREAM>false</IS_FILESTREAM>
+      </Columns>
+      <Columns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
+        <COLUMN_NAME>CourseName</COLUMN_NAME>
+        <ORDINAL_POSITION>3</ORDINAL_POSITION>
+        <IS_NULLABLE>YES</IS_NULLABLE>
+        <DATA_TYPE>nvarchar</DATA_TYPE>
+        <CHARACTER_MAXIMUM_LENGTH>50</CHARACTER_MAXIMUM_LENGTH>
+        <CHARACTER_OCTET_LENGTH>100</CHARACTER_OCTET_LENGTH>
+        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
+        <IS_SPARSE>false</IS_SPARSE>
+        <IS_COLUMN_SET>false</IS_COLUMN_SET>
+        <IS_FILESTREAM>false</IS_FILESTREAM>
+      </Columns>
+      <Columns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
+        <COLUMN_NAME>CourseLocation</COLUMN_NAME>
+        <ORDINAL_POSITION>4</ORDINAL_POSITION>
+        <IS_NULLABLE>YES</IS_NULLABLE>
+        <DATA_TYPE>nvarchar</DATA_TYPE>
+        <CHARACTER_MAXIMUM_LENGTH>50</CHARACTER_MAXIMUM_LENGTH>
+        <CHARACTER_OCTET_LENGTH>100</CHARACTER_OCTET_LENGTH>
+        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
         <IS_SPARSE>false</IS_SPARSE>
         <IS_COLUMN_SET>false</IS_COLUMN_SET>
         <IS_FILESTREAM>false</IS_FILESTREAM>
@@ -2822,8 +2888,8 @@
       <AllColumns>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
-        <COLUMN_NAME>Training_CourseID</COLUMN_NAME>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <COLUMN_NAME>CoF_ID</COLUMN_NAME>
         <ORDINAL_POSITION>1</ORDINAL_POSITION>
         <IS_NULLABLE>NO</IS_NULLABLE>
         <DATA_TYPE>int</DATA_TYPE>
@@ -2837,14 +2903,29 @@
       <AllColumns>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
-        <COLUMN_NAME>Officers_BadgeID</COLUMN_NAME>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <COLUMN_NAME>CourseName</COLUMN_NAME>
         <ORDINAL_POSITION>2</ORDINAL_POSITION>
         <IS_NULLABLE>NO</IS_NULLABLE>
-        <DATA_TYPE>int</DATA_TYPE>
-        <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
-        <NUMERIC_PRECISION_RADIX>10</NUMERIC_PRECISION_RADIX>
-        <NUMERIC_SCALE>0</NUMERIC_SCALE>
+        <DATA_TYPE>nvarchar</DATA_TYPE>
+        <CHARACTER_MAXIMUM_LENGTH>50</CHARACTER_MAXIMUM_LENGTH>
+        <CHARACTER_OCTET_LENGTH>100</CHARACTER_OCTET_LENGTH>
+        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
+        <IS_SPARSE>false</IS_SPARSE>
+        <IS_COLUMN_SET>false</IS_COLUMN_SET>
+        <IS_FILESTREAM>false</IS_FILESTREAM>
+      </AllColumns>
+      <AllColumns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <COLUMN_NAME>CourseLocation</COLUMN_NAME>
+        <ORDINAL_POSITION>3</ORDINAL_POSITION>
+        <IS_NULLABLE>NO</IS_NULLABLE>
+        <DATA_TYPE>nvarchar</DATA_TYPE>
+        <CHARACTER_MAXIMUM_LENGTH>50</CHARACTER_MAXIMUM_LENGTH>
+        <CHARACTER_OCTET_LENGTH>100</CHARACTER_OCTET_LENGTH>
+        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
         <IS_SPARSE>false</IS_SPARSE>
         <IS_COLUMN_SET>false</IS_COLUMN_SET>
         <IS_FILESTREAM>false</IS_FILESTREAM>
@@ -3101,23 +3182,8 @@
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Training</TABLE_NAME>
-        <COLUMN_NAME>CourseName</COLUMN_NAME>
-        <ORDINAL_POSITION>2</ORDINAL_POSITION>
-        <IS_NULLABLE>NO</IS_NULLABLE>
-        <DATA_TYPE>nvarchar</DATA_TYPE>
-        <CHARACTER_MAXIMUM_LENGTH>100</CHARACTER_MAXIMUM_LENGTH>
-        <CHARACTER_OCTET_LENGTH>200</CHARACTER_OCTET_LENGTH>
-        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
-        <IS_SPARSE>false</IS_SPARSE>
-        <IS_COLUMN_SET>false</IS_COLUMN_SET>
-        <IS_FILESTREAM>false</IS_FILESTREAM>
-      </AllColumns>
-      <AllColumns>
-        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
-        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Training</TABLE_NAME>
         <COLUMN_NAME>Score</COLUMN_NAME>
-        <ORDINAL_POSITION>3</ORDINAL_POSITION>
+        <ORDINAL_POSITION>2</ORDINAL_POSITION>
         <IS_NULLABLE>YES</IS_NULLABLE>
         <DATA_TYPE>int</DATA_TYPE>
         <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
@@ -3132,7 +3198,7 @@
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Training</TABLE_NAME>
         <COLUMN_NAME>Date</COLUMN_NAME>
-        <ORDINAL_POSITION>4</ORDINAL_POSITION>
+        <ORDINAL_POSITION>3</ORDINAL_POSITION>
         <IS_NULLABLE>YES</IS_NULLABLE>
         <DATA_TYPE>date</DATA_TYPE>
         <DATETIME_PRECISION>0</DATETIME_PRECISION>
@@ -3145,12 +3211,72 @@
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Training</TABLE_NAME>
         <COLUMN_NAME>Officers_BadgeID</COLUMN_NAME>
-        <ORDINAL_POSITION>5</ORDINAL_POSITION>
+        <ORDINAL_POSITION>4</ORDINAL_POSITION>
         <IS_NULLABLE>YES</IS_NULLABLE>
         <DATA_TYPE>int</DATA_TYPE>
         <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
         <NUMERIC_PRECISION_RADIX>10</NUMERIC_PRECISION_RADIX>
         <NUMERIC_SCALE>0</NUMERIC_SCALE>
+        <IS_SPARSE>false</IS_SPARSE>
+        <IS_COLUMN_SET>false</IS_COLUMN_SET>
+        <IS_FILESTREAM>false</IS_FILESTREAM>
+      </AllColumns>
+      <AllColumns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
+        <COLUMN_NAME>Training_CourseID</COLUMN_NAME>
+        <ORDINAL_POSITION>1</ORDINAL_POSITION>
+        <IS_NULLABLE>NO</IS_NULLABLE>
+        <DATA_TYPE>int</DATA_TYPE>
+        <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
+        <NUMERIC_PRECISION_RADIX>10</NUMERIC_PRECISION_RADIX>
+        <NUMERIC_SCALE>0</NUMERIC_SCALE>
+        <IS_SPARSE>false</IS_SPARSE>
+        <IS_COLUMN_SET>false</IS_COLUMN_SET>
+        <IS_FILESTREAM>false</IS_FILESTREAM>
+      </AllColumns>
+      <AllColumns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
+        <COLUMN_NAME>Officers_BadgeID</COLUMN_NAME>
+        <ORDINAL_POSITION>2</ORDINAL_POSITION>
+        <IS_NULLABLE>NO</IS_NULLABLE>
+        <DATA_TYPE>int</DATA_TYPE>
+        <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
+        <NUMERIC_PRECISION_RADIX>10</NUMERIC_PRECISION_RADIX>
+        <NUMERIC_SCALE>0</NUMERIC_SCALE>
+        <IS_SPARSE>false</IS_SPARSE>
+        <IS_COLUMN_SET>false</IS_COLUMN_SET>
+        <IS_FILESTREAM>false</IS_FILESTREAM>
+      </AllColumns>
+      <AllColumns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
+        <COLUMN_NAME>CourseName</COLUMN_NAME>
+        <ORDINAL_POSITION>3</ORDINAL_POSITION>
+        <IS_NULLABLE>YES</IS_NULLABLE>
+        <DATA_TYPE>nvarchar</DATA_TYPE>
+        <CHARACTER_MAXIMUM_LENGTH>50</CHARACTER_MAXIMUM_LENGTH>
+        <CHARACTER_OCTET_LENGTH>100</CHARACTER_OCTET_LENGTH>
+        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
+        <IS_SPARSE>false</IS_SPARSE>
+        <IS_COLUMN_SET>false</IS_COLUMN_SET>
+        <IS_FILESTREAM>false</IS_FILESTREAM>
+      </AllColumns>
+      <AllColumns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
+        <COLUMN_NAME>CourseLocation</COLUMN_NAME>
+        <ORDINAL_POSITION>4</ORDINAL_POSITION>
+        <IS_NULLABLE>YES</IS_NULLABLE>
+        <DATA_TYPE>nvarchar</DATA_TYPE>
+        <CHARACTER_MAXIMUM_LENGTH>50</CHARACTER_MAXIMUM_LENGTH>
+        <CHARACTER_OCTET_LENGTH>100</CHARACTER_OCTET_LENGTH>
+        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
         <IS_SPARSE>false</IS_SPARSE>
         <IS_COLUMN_SET>false</IS_COLUMN_SET>
         <IS_FILESTREAM>false</IS_FILESTREAM>
@@ -3368,28 +3494,6 @@
       <ForeignKeys>
         <CONSTRAINT_CATALOG>Police Training 2</CONSTRAINT_CATALOG>
         <CONSTRAINT_SCHEMA>dbo</CONSTRAINT_SCHEMA>
-        <CONSTRAINT_NAME>FK_Officers_Training_Officers</CONSTRAINT_NAME>
-        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
-        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
-        <CONSTRAINT_TYPE>FOREIGN KEY</CONSTRAINT_TYPE>
-        <IS_DEFERRABLE>NO</IS_DEFERRABLE>
-        <INITIALLY_DEFERRED>NO</INITIALLY_DEFERRED>
-      </ForeignKeys>
-      <ForeignKeys>
-        <CONSTRAINT_CATALOG>Police Training 2</CONSTRAINT_CATALOG>
-        <CONSTRAINT_SCHEMA>dbo</CONSTRAINT_SCHEMA>
-        <CONSTRAINT_NAME>FK_Officers_Training_Training</CONSTRAINT_NAME>
-        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
-        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
-        <CONSTRAINT_TYPE>FOREIGN KEY</CONSTRAINT_TYPE>
-        <IS_DEFERRABLE>NO</IS_DEFERRABLE>
-        <INITIALLY_DEFERRED>NO</INITIALLY_DEFERRED>
-      </ForeignKeys>
-      <ForeignKeys>
-        <CONSTRAINT_CATALOG>Police Training 2</CONSTRAINT_CATALOG>
-        <CONSTRAINT_SCHEMA>dbo</CONSTRAINT_SCHEMA>
         <CONSTRAINT_NAME>FK_Weapons_Officers</CONSTRAINT_NAME>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
@@ -3413,30 +3517,6 @@
   </ForeignKeysCollection>
   <IndexColumnsCollection>
     <DocumentElement>
-      <IndexColumns>
-        <constraint_catalog>Police Training 2</constraint_catalog>
-        <constraint_schema>dbo</constraint_schema>
-        <constraint_name>PK_Officers_Training</constraint_name>
-        <table_catalog>Police Training 2</table_catalog>
-        <table_schema>dbo</table_schema>
-        <table_name>Courses</table_name>
-        <column_name>Officers_BadgeID</column_name>
-        <ordinal_position>2</ordinal_position>
-        <KeyType>56</KeyType>
-        <index_name>PK_Officers_Training</index_name>
-      </IndexColumns>
-      <IndexColumns>
-        <constraint_catalog>Police Training 2</constraint_catalog>
-        <constraint_schema>dbo</constraint_schema>
-        <constraint_name>PK_Officers_Training</constraint_name>
-        <table_catalog>Police Training 2</table_catalog>
-        <table_schema>dbo</table_schema>
-        <table_name>Courses</table_name>
-        <column_name>Training_CourseID</column_name>
-        <ordinal_position>1</ordinal_position>
-        <KeyType>56</KeyType>
-        <index_name>PK_Officers_Training</index_name>
-      </IndexColumns>
       <IndexColumns>
         <constraint_catalog>Police Training 2</constraint_catalog>
         <constraint_schema>dbo</constraint_schema>
@@ -3512,6 +3592,30 @@
       <IndexColumns>
         <constraint_catalog>Police Training 2</constraint_catalog>
         <constraint_schema>dbo</constraint_schema>
+        <constraint_name>PK_Officers_Training</constraint_name>
+        <table_catalog>Police Training 2</table_catalog>
+        <table_schema>dbo</table_schema>
+        <table_name>Weapon_Training</table_name>
+        <column_name>Officers_BadgeID</column_name>
+        <ordinal_position>2</ordinal_position>
+        <KeyType>56</KeyType>
+        <index_name>PK_Officers_Training</index_name>
+      </IndexColumns>
+      <IndexColumns>
+        <constraint_catalog>Police Training 2</constraint_catalog>
+        <constraint_schema>dbo</constraint_schema>
+        <constraint_name>PK_Officers_Training</constraint_name>
+        <table_catalog>Police Training 2</table_catalog>
+        <table_schema>dbo</table_schema>
+        <table_name>Weapon_Training</table_name>
+        <column_name>Training_CourseID</column_name>
+        <ordinal_position>1</ordinal_position>
+        <KeyType>56</KeyType>
+        <index_name>PK_Officers_Training</index_name>
+      </IndexColumns>
+      <IndexColumns>
+        <constraint_catalog>Police Training 2</constraint_catalog>
+        <constraint_schema>dbo</constraint_schema>
         <constraint_name>PK_Weapon_Type</constraint_name>
         <table_catalog>Police Training 2</table_catalog>
         <table_schema>dbo</table_schema>
@@ -3537,16 +3641,6 @@
   </IndexColumnsCollection>
   <IndexesCollection>
     <DocumentElement>
-      <Indexes>
-        <constraint_catalog>Police Training 2</constraint_catalog>
-        <constraint_schema>dbo</constraint_schema>
-        <constraint_name>PK_Officers_Training</constraint_name>
-        <table_catalog>Police Training 2</table_catalog>
-        <table_schema>dbo</table_schema>
-        <table_name>Courses</table_name>
-        <index_name>PK_Officers_Training</index_name>
-        <type_desc>CLUSTERED</type_desc>
-      </Indexes>
       <Indexes>
         <constraint_catalog>Police Training 2</constraint_catalog>
         <constraint_schema>dbo</constraint_schema>
@@ -3595,6 +3689,16 @@
         <table_schema>dbo</table_schema>
         <table_name>Training</table_name>
         <index_name>PK_Training</index_name>
+        <type_desc>CLUSTERED</type_desc>
+      </Indexes>
+      <Indexes>
+        <constraint_catalog>Police Training 2</constraint_catalog>
+        <constraint_schema>dbo</constraint_schema>
+        <constraint_name>PK_Officers_Training</constraint_name>
+        <table_catalog>Police Training 2</table_catalog>
+        <table_schema>dbo</table_schema>
+        <table_name>Weapon_Training</table_name>
+        <index_name>PK_Officers_Training</index_name>
         <type_desc>CLUSTERED</type_desc>
       </Indexes>
       <Indexes>
@@ -3983,7 +4087,7 @@
         </Column>
       </DocumentElement>
     </Table>
-    <Table Schema="dbo" Name="Courses">
+    <Table Schema="dbo" Name="Weapon_Training">
       <DocumentElement>
         <Column>
           <ColumnName>Training_CourseID</ColumnName>
@@ -3995,7 +4099,7 @@
           <IsKey>true</IsKey>
           <BaseColumnName>Training_CourseID</BaseColumnName>
           <BaseSchemaName>dbo</BaseSchemaName>
-          <BaseTableName>Courses</BaseTableName>
+          <BaseTableName>Weapon_Training</BaseTableName>
           <DataType>System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</DataType>
           <AllowDBNull>false</AllowDBNull>
           <ProviderType>8</ProviderType>
@@ -4022,10 +4126,37 @@
           <IsKey>true</IsKey>
           <BaseColumnName>Officers_BadgeID</BaseColumnName>
           <BaseSchemaName>dbo</BaseSchemaName>
-          <BaseTableName>Courses</BaseTableName>
+          <BaseTableName>Weapon_Training</BaseTableName>
           <DataType>System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</DataType>
           <AllowDBNull>false</AllowDBNull>
           <ProviderType>8</ProviderType>
+          <IsAliased>false</IsAliased>
+          <IsExpression>false</IsExpression>
+          <IsIdentity>true</IsIdentity>
+          <IsAutoIncrement>true</IsAutoIncrement>
+          <IsRowVersion>false</IsRowVersion>
+          <IsHidden>false</IsHidden>
+          <IsLong>false</IsLong>
+          <IsReadOnly>true</IsReadOnly>
+          <ProviderSpecificDataType>System.Data.SqlTypes.SqlInt32, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ProviderSpecificDataType>
+          <DataTypeName>int</DataTypeName>
+          <NonVersionedProviderType>8</NonVersionedProviderType>
+          <IsColumnSet>false</IsColumnSet>
+        </Column>
+        <Column>
+          <ColumnName>CourseName</ColumnName>
+          <ColumnOrdinal>2</ColumnOrdinal>
+          <ColumnSize>50</ColumnSize>
+          <NumericPrecision>255</NumericPrecision>
+          <NumericScale>255</NumericScale>
+          <IsUnique>false</IsUnique>
+          <IsKey>false</IsKey>
+          <BaseColumnName>CourseName</BaseColumnName>
+          <BaseSchemaName>dbo</BaseSchemaName>
+          <BaseTableName>Weapon_Training</BaseTableName>
+          <DataType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</DataType>
+          <AllowDBNull>true</AllowDBNull>
+          <ProviderType>12</ProviderType>
           <IsAliased>false</IsAliased>
           <IsExpression>false</IsExpression>
           <IsIdentity>false</IsIdentity>
@@ -4034,9 +4165,36 @@
           <IsHidden>false</IsHidden>
           <IsLong>false</IsLong>
           <IsReadOnly>false</IsReadOnly>
-          <ProviderSpecificDataType>System.Data.SqlTypes.SqlInt32, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ProviderSpecificDataType>
-          <DataTypeName>int</DataTypeName>
-          <NonVersionedProviderType>8</NonVersionedProviderType>
+          <ProviderSpecificDataType>System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ProviderSpecificDataType>
+          <DataTypeName>nvarchar</DataTypeName>
+          <NonVersionedProviderType>12</NonVersionedProviderType>
+          <IsColumnSet>false</IsColumnSet>
+        </Column>
+        <Column>
+          <ColumnName>CourseLocation</ColumnName>
+          <ColumnOrdinal>3</ColumnOrdinal>
+          <ColumnSize>50</ColumnSize>
+          <NumericPrecision>255</NumericPrecision>
+          <NumericScale>255</NumericScale>
+          <IsUnique>false</IsUnique>
+          <IsKey>false</IsKey>
+          <BaseColumnName>CourseLocation</BaseColumnName>
+          <BaseSchemaName>dbo</BaseSchemaName>
+          <BaseTableName>Weapon_Training</BaseTableName>
+          <DataType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</DataType>
+          <AllowDBNull>true</AllowDBNull>
+          <ProviderType>12</ProviderType>
+          <IsAliased>false</IsAliased>
+          <IsExpression>false</IsExpression>
+          <IsIdentity>false</IsIdentity>
+          <IsAutoIncrement>false</IsAutoIncrement>
+          <IsRowVersion>false</IsRowVersion>
+          <IsHidden>false</IsHidden>
+          <IsLong>false</IsLong>
+          <IsReadOnly>false</IsReadOnly>
+          <ProviderSpecificDataType>System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ProviderSpecificDataType>
+          <DataTypeName>nvarchar</DataTypeName>
+          <NonVersionedProviderType>12</NonVersionedProviderType>
           <IsColumnSet>false</IsColumnSet>
         </Column>
       </DocumentElement>
@@ -4164,6 +4322,91 @@
           <BaseTableName>Weapon_Type</BaseTableName>
           <DataType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</DataType>
           <AllowDBNull>true</AllowDBNull>
+          <ProviderType>12</ProviderType>
+          <IsAliased>false</IsAliased>
+          <IsExpression>false</IsExpression>
+          <IsIdentity>false</IsIdentity>
+          <IsAutoIncrement>false</IsAutoIncrement>
+          <IsRowVersion>false</IsRowVersion>
+          <IsHidden>false</IsHidden>
+          <IsLong>false</IsLong>
+          <IsReadOnly>false</IsReadOnly>
+          <ProviderSpecificDataType>System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ProviderSpecificDataType>
+          <DataTypeName>nvarchar</DataTypeName>
+          <NonVersionedProviderType>12</NonVersionedProviderType>
+          <IsColumnSet>false</IsColumnSet>
+        </Column>
+      </DocumentElement>
+    </Table>
+    <Table Schema="dbo" Name="Course_of_Fire">
+      <DocumentElement>
+        <Column>
+          <ColumnName>CoF_ID</ColumnName>
+          <ColumnOrdinal>0</ColumnOrdinal>
+          <ColumnSize>4</ColumnSize>
+          <NumericPrecision>10</NumericPrecision>
+          <NumericScale>255</NumericScale>
+          <IsUnique>false</IsUnique>
+          <IsKey>false</IsKey>
+          <BaseColumnName>CoF_ID</BaseColumnName>
+          <BaseSchemaName>dbo</BaseSchemaName>
+          <BaseTableName>Course_of_Fire</BaseTableName>
+          <DataType>System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</DataType>
+          <AllowDBNull>false</AllowDBNull>
+          <ProviderType>8</ProviderType>
+          <IsAliased>false</IsAliased>
+          <IsExpression>false</IsExpression>
+          <IsIdentity>true</IsIdentity>
+          <IsAutoIncrement>true</IsAutoIncrement>
+          <IsRowVersion>false</IsRowVersion>
+          <IsHidden>false</IsHidden>
+          <IsLong>false</IsLong>
+          <IsReadOnly>true</IsReadOnly>
+          <ProviderSpecificDataType>System.Data.SqlTypes.SqlInt32, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ProviderSpecificDataType>
+          <DataTypeName>int</DataTypeName>
+          <NonVersionedProviderType>8</NonVersionedProviderType>
+          <IsColumnSet>false</IsColumnSet>
+        </Column>
+        <Column>
+          <ColumnName>CourseName</ColumnName>
+          <ColumnOrdinal>1</ColumnOrdinal>
+          <ColumnSize>50</ColumnSize>
+          <NumericPrecision>255</NumericPrecision>
+          <NumericScale>255</NumericScale>
+          <IsUnique>false</IsUnique>
+          <IsKey>false</IsKey>
+          <BaseColumnName>CourseName</BaseColumnName>
+          <BaseSchemaName>dbo</BaseSchemaName>
+          <BaseTableName>Course_of_Fire</BaseTableName>
+          <DataType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</DataType>
+          <AllowDBNull>false</AllowDBNull>
+          <ProviderType>12</ProviderType>
+          <IsAliased>false</IsAliased>
+          <IsExpression>false</IsExpression>
+          <IsIdentity>false</IsIdentity>
+          <IsAutoIncrement>false</IsAutoIncrement>
+          <IsRowVersion>false</IsRowVersion>
+          <IsHidden>false</IsHidden>
+          <IsLong>false</IsLong>
+          <IsReadOnly>false</IsReadOnly>
+          <ProviderSpecificDataType>System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ProviderSpecificDataType>
+          <DataTypeName>nvarchar</DataTypeName>
+          <NonVersionedProviderType>12</NonVersionedProviderType>
+          <IsColumnSet>false</IsColumnSet>
+        </Column>
+        <Column>
+          <ColumnName>CourseLocation</ColumnName>
+          <ColumnOrdinal>2</ColumnOrdinal>
+          <ColumnSize>50</ColumnSize>
+          <NumericPrecision>255</NumericPrecision>
+          <NumericScale>255</NumericScale>
+          <IsUnique>false</IsUnique>
+          <IsKey>false</IsKey>
+          <BaseColumnName>CourseLocation</BaseColumnName>
+          <BaseSchemaName>dbo</BaseSchemaName>
+          <BaseTableName>Course_of_Fire</BaseTableName>
+          <DataType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</DataType>
+          <AllowDBNull>false</AllowDBNull>
           <ProviderType>12</ProviderType>
           <IsAliased>false</IsAliased>
           <IsExpression>false</IsExpression>
@@ -4349,35 +4592,8 @@
           <IsColumnSet>false</IsColumnSet>
         </Column>
         <Column>
-          <ColumnName>CourseName</ColumnName>
-          <ColumnOrdinal>1</ColumnOrdinal>
-          <ColumnSize>100</ColumnSize>
-          <NumericPrecision>255</NumericPrecision>
-          <NumericScale>255</NumericScale>
-          <IsUnique>false</IsUnique>
-          <IsKey>false</IsKey>
-          <BaseColumnName>CourseName</BaseColumnName>
-          <BaseSchemaName>dbo</BaseSchemaName>
-          <BaseTableName>Training</BaseTableName>
-          <DataType>System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</DataType>
-          <AllowDBNull>false</AllowDBNull>
-          <ProviderType>12</ProviderType>
-          <IsAliased>false</IsAliased>
-          <IsExpression>false</IsExpression>
-          <IsIdentity>false</IsIdentity>
-          <IsAutoIncrement>false</IsAutoIncrement>
-          <IsRowVersion>false</IsRowVersion>
-          <IsHidden>false</IsHidden>
-          <IsLong>false</IsLong>
-          <IsReadOnly>false</IsReadOnly>
-          <ProviderSpecificDataType>System.Data.SqlTypes.SqlString, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</ProviderSpecificDataType>
-          <DataTypeName>nvarchar</DataTypeName>
-          <NonVersionedProviderType>12</NonVersionedProviderType>
-          <IsColumnSet>false</IsColumnSet>
-        </Column>
-        <Column>
           <ColumnName>Score</ColumnName>
-          <ColumnOrdinal>2</ColumnOrdinal>
+          <ColumnOrdinal>1</ColumnOrdinal>
           <ColumnSize>4</ColumnSize>
           <NumericPrecision>10</NumericPrecision>
           <NumericScale>255</NumericScale>
@@ -4404,7 +4620,7 @@
         </Column>
         <Column>
           <ColumnName>Date</ColumnName>
-          <ColumnOrdinal>3</ColumnOrdinal>
+          <ColumnOrdinal>2</ColumnOrdinal>
           <ColumnSize>3</ColumnSize>
           <NumericPrecision>255</NumericPrecision>
           <NumericScale>255</NumericScale>
@@ -4431,7 +4647,7 @@
         </Column>
         <Column>
           <ColumnName>Officers_BadgeID</ColumnName>
-          <ColumnOrdinal>4</ColumnOrdinal>
+          <ColumnOrdinal>3</ColumnOrdinal>
           <ColumnSize>4</ColumnSize>
           <NumericPrecision>10</NumericPrecision>
           <NumericScale>255</NumericScale>
@@ -4567,13 +4783,19 @@
       <Tables>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
         <TABLE_TYPE>BASE TABLE</TABLE_TYPE>
       </Tables>
       <Tables>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Weapon_Type</TABLE_NAME>
+        <TABLE_TYPE>BASE TABLE</TABLE_TYPE>
+      </Tables>
+      <Tables>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
         <TABLE_TYPE>BASE TABLE</TABLE_TYPE>
       </Tables>
       <Tables>
@@ -4759,7 +4981,7 @@
       <Columns>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
         <COLUMN_NAME>Training_CourseID</COLUMN_NAME>
         <ORDINAL_POSITION>1</ORDINAL_POSITION>
         <IS_NULLABLE>NO</IS_NULLABLE>
@@ -4771,7 +4993,7 @@
       <Columns>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
         <COLUMN_NAME>Officers_BadgeID</COLUMN_NAME>
         <ORDINAL_POSITION>2</ORDINAL_POSITION>
         <IS_NULLABLE>NO</IS_NULLABLE>
@@ -4779,6 +5001,32 @@
         <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
         <NUMERIC_PRECISION_RADIX>10</NUMERIC_PRECISION_RADIX>
         <NUMERIC_SCALE>0</NUMERIC_SCALE>
+      </Columns>
+      <Columns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
+        <COLUMN_NAME>CourseName</COLUMN_NAME>
+        <ORDINAL_POSITION>3</ORDINAL_POSITION>
+        <IS_NULLABLE>YES</IS_NULLABLE>
+        <DATA_TYPE>nvarchar</DATA_TYPE>
+        <CHARACTER_MAXIMUM_LENGTH>50</CHARACTER_MAXIMUM_LENGTH>
+        <CHARACTER_OCTET_LENGTH>100</CHARACTER_OCTET_LENGTH>
+        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
+        <COLLATION_NAME>SQL_Latin1_General_CP1_CI_AS</COLLATION_NAME>
+      </Columns>
+      <Columns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
+        <COLUMN_NAME>CourseLocation</COLUMN_NAME>
+        <ORDINAL_POSITION>4</ORDINAL_POSITION>
+        <IS_NULLABLE>YES</IS_NULLABLE>
+        <DATA_TYPE>nvarchar</DATA_TYPE>
+        <CHARACTER_MAXIMUM_LENGTH>50</CHARACTER_MAXIMUM_LENGTH>
+        <CHARACTER_OCTET_LENGTH>100</CHARACTER_OCTET_LENGTH>
+        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
+        <COLLATION_NAME>SQL_Latin1_General_CP1_CI_AS</COLLATION_NAME>
       </Columns>
       <Columns>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
@@ -4837,6 +5085,44 @@
         <COLUMN_NAME>Classification</COLUMN_NAME>
         <ORDINAL_POSITION>5</ORDINAL_POSITION>
         <IS_NULLABLE>YES</IS_NULLABLE>
+        <DATA_TYPE>nvarchar</DATA_TYPE>
+        <CHARACTER_MAXIMUM_LENGTH>50</CHARACTER_MAXIMUM_LENGTH>
+        <CHARACTER_OCTET_LENGTH>100</CHARACTER_OCTET_LENGTH>
+        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
+        <COLLATION_NAME>SQL_Latin1_General_CP1_CI_AS</COLLATION_NAME>
+      </Columns>
+      <Columns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <COLUMN_NAME>CoF_ID</COLUMN_NAME>
+        <ORDINAL_POSITION>1</ORDINAL_POSITION>
+        <IS_NULLABLE>NO</IS_NULLABLE>
+        <DATA_TYPE>int</DATA_TYPE>
+        <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
+        <NUMERIC_PRECISION_RADIX>10</NUMERIC_PRECISION_RADIX>
+        <NUMERIC_SCALE>0</NUMERIC_SCALE>
+      </Columns>
+      <Columns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <COLUMN_NAME>CourseName</COLUMN_NAME>
+        <ORDINAL_POSITION>2</ORDINAL_POSITION>
+        <IS_NULLABLE>NO</IS_NULLABLE>
+        <DATA_TYPE>nvarchar</DATA_TYPE>
+        <CHARACTER_MAXIMUM_LENGTH>50</CHARACTER_MAXIMUM_LENGTH>
+        <CHARACTER_OCTET_LENGTH>100</CHARACTER_OCTET_LENGTH>
+        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
+        <COLLATION_NAME>SQL_Latin1_General_CP1_CI_AS</COLLATION_NAME>
+      </Columns>
+      <Columns>
+        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
+        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
+        <TABLE_NAME>Course_of_Fire</TABLE_NAME>
+        <COLUMN_NAME>CourseLocation</COLUMN_NAME>
+        <ORDINAL_POSITION>3</ORDINAL_POSITION>
+        <IS_NULLABLE>NO</IS_NULLABLE>
         <DATA_TYPE>nvarchar</DATA_TYPE>
         <CHARACTER_MAXIMUM_LENGTH>50</CHARACTER_MAXIMUM_LENGTH>
         <CHARACTER_OCTET_LENGTH>100</CHARACTER_OCTET_LENGTH>
@@ -4919,21 +5205,8 @@
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Training</TABLE_NAME>
-        <COLUMN_NAME>CourseName</COLUMN_NAME>
-        <ORDINAL_POSITION>2</ORDINAL_POSITION>
-        <IS_NULLABLE>NO</IS_NULLABLE>
-        <DATA_TYPE>nvarchar</DATA_TYPE>
-        <CHARACTER_MAXIMUM_LENGTH>100</CHARACTER_MAXIMUM_LENGTH>
-        <CHARACTER_OCTET_LENGTH>200</CHARACTER_OCTET_LENGTH>
-        <CHARACTER_SET_NAME>UNICODE</CHARACTER_SET_NAME>
-        <COLLATION_NAME>SQL_Latin1_General_CP1_CI_AS</COLLATION_NAME>
-      </Columns>
-      <Columns>
-        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
-        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Training</TABLE_NAME>
         <COLUMN_NAME>Score</COLUMN_NAME>
-        <ORDINAL_POSITION>3</ORDINAL_POSITION>
+        <ORDINAL_POSITION>2</ORDINAL_POSITION>
         <IS_NULLABLE>YES</IS_NULLABLE>
         <DATA_TYPE>int</DATA_TYPE>
         <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
@@ -4945,7 +5218,7 @@
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Training</TABLE_NAME>
         <COLUMN_NAME>Date</COLUMN_NAME>
-        <ORDINAL_POSITION>4</ORDINAL_POSITION>
+        <ORDINAL_POSITION>3</ORDINAL_POSITION>
         <IS_NULLABLE>YES</IS_NULLABLE>
         <DATA_TYPE>date</DATA_TYPE>
         <DATETIME_PRECISION>0</DATETIME_PRECISION>
@@ -4955,7 +5228,7 @@
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
         <TABLE_NAME>Training</TABLE_NAME>
         <COLUMN_NAME>Officers_BadgeID</COLUMN_NAME>
-        <ORDINAL_POSITION>5</ORDINAL_POSITION>
+        <ORDINAL_POSITION>4</ORDINAL_POSITION>
         <IS_NULLABLE>YES</IS_NULLABLE>
         <DATA_TYPE>int</DATA_TYPE>
         <NUMERIC_PRECISION>10</NUMERIC_PRECISION>
@@ -5060,7 +5333,7 @@
         <CONSTRAINT_NAME>PK_Officers_Training</CONSTRAINT_NAME>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
         <COLUMN_NAME>Officers_BadgeID</COLUMN_NAME>
         <ORDINAL_POSITION>2</ORDINAL_POSITION>
       </PrimaryKeyColumns>
@@ -5070,7 +5343,7 @@
         <CONSTRAINT_NAME>PK_Officers_Training</CONSTRAINT_NAME>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
+        <TABLE_NAME>Weapon_Training</TABLE_NAME>
         <COLUMN_NAME>Training_CourseID</COLUMN_NAME>
         <ORDINAL_POSITION>1</ORDINAL_POSITION>
       </PrimaryKeyColumns>
@@ -5151,26 +5424,6 @@
       <ForeignKeyColumns>
         <CONSTRAINT_CATALOG>Police Training 2</CONSTRAINT_CATALOG>
         <CONSTRAINT_SCHEMA>dbo</CONSTRAINT_SCHEMA>
-        <CONSTRAINT_NAME>FK_Officers_Training_Officers</CONSTRAINT_NAME>
-        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
-        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
-        <COLUMN_NAME>Officers_BadgeID</COLUMN_NAME>
-        <ORDINAL_POSITION>1</ORDINAL_POSITION>
-      </ForeignKeyColumns>
-      <ForeignKeyColumns>
-        <CONSTRAINT_CATALOG>Police Training 2</CONSTRAINT_CATALOG>
-        <CONSTRAINT_SCHEMA>dbo</CONSTRAINT_SCHEMA>
-        <CONSTRAINT_NAME>FK_Officers_Training_Training</CONSTRAINT_NAME>
-        <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
-        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
-        <COLUMN_NAME>Training_CourseID</COLUMN_NAME>
-        <ORDINAL_POSITION>1</ORDINAL_POSITION>
-      </ForeignKeyColumns>
-      <ForeignKeyColumns>
-        <CONSTRAINT_CATALOG>Police Training 2</CONSTRAINT_CATALOG>
-        <CONSTRAINT_SCHEMA>dbo</CONSTRAINT_SCHEMA>
         <CONSTRAINT_NAME>FK_Weapons_Officers</CONSTRAINT_NAME>
         <TABLE_CATALOG>Police Training 2</TABLE_CATALOG>
         <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
@@ -5219,20 +5472,6 @@
         <TABLE_NAME>Officer_Weapon</TABLE_NAME>
         <REFERENCED_TABLE_SCHEMA>dbo</REFERENCED_TABLE_SCHEMA>
         <REFERENCED_TABLE_NAME>Weapons</REFERENCED_TABLE_NAME>
-      </ForeignKeyReferences>
-      <ForeignKeyReferences>
-        <CONSTRAINT_NAME>FK_Officers_Training_Officers</CONSTRAINT_NAME>
-        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
-        <REFERENCED_TABLE_SCHEMA>dbo</REFERENCED_TABLE_SCHEMA>
-        <REFERENCED_TABLE_NAME>Officers</REFERENCED_TABLE_NAME>
-      </ForeignKeyReferences>
-      <ForeignKeyReferences>
-        <CONSTRAINT_NAME>FK_Officers_Training_Training</CONSTRAINT_NAME>
-        <TABLE_SCHEMA>dbo</TABLE_SCHEMA>
-        <TABLE_NAME>Courses</TABLE_NAME>
-        <REFERENCED_TABLE_SCHEMA>dbo</REFERENCED_TABLE_SCHEMA>
-        <REFERENCED_TABLE_NAME>Training</REFERENCED_TABLE_NAME>
       </ForeignKeyReferences>
       <ForeignKeyReferences>
         <CONSTRAINT_NAME>FK_Weapons_Officers</CONSTRAINT_NAME>
