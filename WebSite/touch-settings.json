@@ -1,0 +1,9 @@
+﻿{
+  "appName": "Police Training Assistant",
+  "splash": {
+    "enabled": true,
+    "logo": "/Images/BeaverPoliceLogo.png",
+    "background": "/Images/BeaverPolice.jpg",
+    "duration": 3000
+  }
+}

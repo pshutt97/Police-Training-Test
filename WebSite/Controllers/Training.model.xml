@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="Training" alias="Training" created="2017-04-10T17:06:35" modified="2017-04-26T17:12:11" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys>
+    <foreignKey id="Officers_Badge" parentTableSchema="dbo" parentTableName="Officers" x="331" y="20">
+      <foreignKeyColumn columnName="Officers_BadgeID" parentColumnName="BadgeID" />
+    </foreignKey>
+  </foreignKeys>
+  <columns>
+    <column name="CourseName" fieldName="CourseName" label="Course" />
+    <column name="CourseID" fieldName="CourseID" label="Course ID" />
+    <column name="Score" fieldName="Score" label="Score" />
+    <column name="Date" fieldName="Date" label="Date" format="g" />
+    <column name="FirstName" fieldName="OfficersBadgefirstname" label="Officer First Name" foreignKey="Officers_Badge" />
+    <column name="LastName" fieldName="OfficersBadgelastname" label="Officer Last Name" foreignKey="Officers_Badge" />
+    <column name="Officers_BadgeID" fieldName="OfficersBadgeid" label="Officers Badgeid" />
+  </columns>
+</dataModel>
